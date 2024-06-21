@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react";
 
 function App() {
-  const [todos, setTodos] = useState(() => {
-    const savedTasks = localStorage.getItem("todos");
-    return savedTasks ? JSON.parse(savedTasks) : initialTodos;
-  });
+  const [todos, setTodos] = useState([]);
   const [newTask, setNewTask] = useState("");
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   const handleInputChange = (event) => {
     setNewTask(event.target.value);
