@@ -78,9 +78,7 @@ button:active {
   transform: scale(1.1);
 }
 
-input:hover {
-  transform: scale(1.1);
-}
+
 
 h1 {
   font-size: 2.5rem;
